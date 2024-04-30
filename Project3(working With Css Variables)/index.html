@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with CSS variables</title>
+</head>
+<body>
+    <h1>Update CSS variables with JS</h1>
+    <div class="Headoffice">
+        <div class="controller">
+            <label for="spacing">Spacing: </label>
+            <input id="spacing" name="spacing" min="10" value="10" max="200" data-sizing:="px" type="range">
+        
+            <label for="Blur">Blur: </label>
+            <input id="Blur" name="Blur" min="0" max="25" data-sizing:="px" type="range">
+        
+            <label for="Color">color: </label>
+            <input id="color" name="base" value="#111111" type="color">
+
+        </div>
+        
+        <img src="https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=500&ixid=MXwxfDB8MXxhbGx8fHx8fHx8fA&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=800" alt="error">
+        
+    </div>
+
+<style>
+    .Headoffice{
+        display: flex;
+        flex-direction: column;
+        border:2px solid;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .controller{
+        display: flex;
+
+    }
+    img{
+        /* transform: scale(0.8); */
+        position: relative;
+        background: blue;
+        padding: 10px;
+    }
+    body {
+      text-align: center;
+      background: #193549;
+      color: white;
+      font-family: 'helvetica neue', sans-serif;
+      font-weight: 100;
+      font-size: 50px;
+    }
+</style>
+
+
+<script>
+    
+</script>
+
+</body>
+
+
+</html>

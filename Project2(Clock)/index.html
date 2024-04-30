@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>clock</title>
+</head>
+<body>
+    <div id="set">
+        <div class="element" id="clock_body">
+            <div class="arrows"  id="arrow_hour"></div>
+            <div class="arrows" id="arrow_min"></div>
+            <div class="arrows" id="arrow_sec"></div>
+
+        </div>
+
+    </div>
+
+</body>
+<style>
+    html{
+        /* background: url(https://unsplash.it/1500/1000?image=881&blur=5); */
+        background: rgb(0, 225, 255);
+    }
+    #clock_body{
+        border: 8px solid white;
+        width: 36vh;
+        height: 36vh;
+        /* align-items: center; */
+        border-radius:36vh;
+        
+    }
+    #set{
+        height: 100vh;
+        display: flex;
+    }
+    .element{
+        margin: auto;
+        
+    }
+    .arrows {
+    width: 1vh;
+    height: 10vh;
+    background: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 5px;
+    transform: rotate(180deg);
+    transform-origin: top;
+    transition: all 0.9s cubic-bezier(0, 1.67, 1, -0.99);
+    }
+
+    #arrow_hour{
+        width: .7vh;
+        height: 7vh;
+    }
+    #arrow_sec{
+        width: 1.1vh;
+        height: 12vh;
+    }
+
+</style>
+
+<script>
+    // console.log(newDate.getHours())
+    newDate = new Date()
+    let x = 30*((newDate.getHours())%12) + 180
+    let y = 6*(newDate.getMinutes()) + 180
+    let z = 6*(newDate.getSeconds()) + 180
+    
+    // function main(){   //ctime = current time
+    // newDate = new Date()
+
+    //     window.requestAnimationFrame(main)
+    //     // console.log("hello")
+    //     x = 30*((newDate.getHours())%12) + 180
+    //     y = 6*(newDate.getMinutes()) + 180
+    //     z = 6*(newDate.getSeconds()) + 180
+    //     document.getElementById('arrow_hour').style.transform = "rotate(" + x+ "deg)"
+    //     document.getElementById('arrow_min').style.transform = "rotate(" + y+ "deg)"
+    //     document.getElementById('arrow_sec').style.transform = "rotate(" + z+ "deg)"
+
+    // }
+    // window.requestAnimationFrame(main)
+    z  = z+54
+    setInterval(() => {
+
+        // newDate = new Date()
+
+    //     window.requestAnimationFrame(main)
+    //     // console.log("hello")
+        x = 30*((newDate.getHours())%12) + 180
+        y = 6*(newDate.getMinutes()) + 180
+        z = z+6;
+        console.log(z)
+        document.getElementById('arrow_hour').style.transform = "rotate(" + x+ "deg)"
+        document.getElementById('arrow_min').style.transform = "rotate(" + y+ "deg)"
+        document.getElementById('arrow_sec').style.transform = "rotate(" + z+ "deg)"
+        
+    }, 1000);
+
+
+
+    
+
+
+</script>
+</html>
